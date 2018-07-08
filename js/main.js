@@ -89,8 +89,6 @@ gridNumRandomized[7];
 
 }
 
-
-
 $("td").click(function(){
 cannonSize--;
 if ($(this).html() !== "")
