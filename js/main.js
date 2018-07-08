@@ -32,19 +32,46 @@ var cannonSize = 30;
 //ships = [miniSub,techSub, bigSub, sneakySub, dangerSub];
 var $grid = $("td");
 var i = null;
+var rand = Math.floor(Math.random() * 80);
+i = rand;
+var miniS = [];
+var miniSNum = false;
+//make a class for each sub
+// this would be used to target a cell and populate it with the class
+console.log(i);
+$($grid[i]).addClass("miniSub").html("miniSubA");
+miniS[0] = i;
+miniSNum = true;
+if (miniSNum == true){
+$($grid[i + 1]).addClass("miniSub").html("miniSubB");
+miniS[1] = i + 1;
+}
+
+$("td").click(function(){
+cannonSize--;
+if ($(this).html() == "miniSubA" || $(this).html() == "miniSubB")
+{
+  $(this).removeClass("miniSub");
+$(this).addClass("subHit");
+}
+else {
+  console.log("Missed The Shot");
+}
+
+});
+
+
+if (cannonSize == 0)
+{
+   console.log("GAMEOVER - You ran out of cannons");
+}
+
 // function resetBoard()
 // {
 //     $("td").html(" ");
 //     $("td").html(" ");
 //
 // }
-var rand = Math.floor(Math.random() * 80);
-i = rand;
-console.log(i);
-
-//make a class for each sub
-// this would be used to target a cell and populate it with the class
-// $($grid[i])
 // $(this).html(miniSub);
 
 // $(this).html(techSub);
