@@ -20,3 +20,34 @@
 //IF the user successfully destroys all the ships on the field they are presented with a WINNER SCREEN
   //Otherwise the user is presented with a GAME OVER screen
 //IF so they have an option to try again or they can exit the game
+
+$(document).ready(function() {
+  console.log("Test");
+var userProfile = function(){
+  this.name = name;
+  this.score = score;
+};
+//var person1 = new person(name,score)
+var cannonSize = 30;
+var ships = [miniSub,techSub, bigSub, sneakySub, dangerSub];
+var $grid = $("td");
+
+// function resetBoard()
+// {
+//     $("td").html(" ");
+//     $("td").html(" ");
+//
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+});
