@@ -29,15 +29,28 @@ var userProfile = function(){
 };
 //var person1 = new person(name,score)
 var cannonSize = 30;
-var ships = [miniSub,techSub, bigSub, sneakySub, dangerSub];
+//ships = [miniSub,techSub, bigSub, sneakySub, dangerSub];
 var $grid = $("td");
-
+var i = null;
 // function resetBoard()
 // {
 //     $("td").html(" ");
 //     $("td").html(" ");
 //
 // }
+var rand = Math.floor(Math.random() * 80);
+i = rand;
+console.log(i);
+
+//make a class for each sub
+// this would be used to target a cell and populate it with the class
+// $($grid[i])
+// $(this).html(miniSub);
+
+// $(this).html(techSub);
+// $(this).html(bigSub);
+// $(this).html(sneakySub);
+// $(this).html(dangerSub);
 
 
 

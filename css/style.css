@@ -18,7 +18,7 @@
 }
 
 .mainGame{
-  width: 62%;
+  width: 70%;
   height: 520px;
   float: center;
   background-color: lightblue;
@@ -27,7 +27,7 @@
 }
 
 .picture{
-width: 21%;
+width: 10%;
 height: 520px;
 float: right;
 background-color: lightgrey;
@@ -46,4 +46,16 @@ margin-left: -10px;
   background-color: black;
   padding: 30px;
   margin-left: -10px;
+}
+
+table {
+  margin: 0 auto;
+  border-radius:10px;
+}
+td {
+  border: 1px solid black;
+  width: 1%;
+  height: 53px;
+  text-align: center;
+  font-size: 8em;
 }
