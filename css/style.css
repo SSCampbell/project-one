@@ -59,3 +59,13 @@ td {
   text-align: center;
   font-size: 8em;
 }
+
+.miniSub{
+  background-color: blue;
+  font-size: 1px;
+}
+
+.subHit{
+  background-color: Red;
+    font-size: 1px;
+}
