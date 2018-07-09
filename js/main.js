@@ -23,10 +23,7 @@
 
 $(document).ready(function() {
   console.log("Test");
-var userProfile = function(){
-  this.name = name;
-  this.score = score;
-};
+
 //var person1 = new person(name,score)
 var cannonSize = 30;
 //ships = [miniSub,techSub, bigSub, sneakySub, dangerSub];
@@ -41,6 +38,29 @@ var gridNumRandomized = [];
 var miniSNum = false;
 var techSNum = false;
 var powerSNum = false;
+
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+
+
+
+// When the user clicks on <span>, close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+var $name = document.getElementById("fname").value;
+//name class text
+$(pName).html($name);
+}
+
+
+
 //make a class for each sub
 // this would be used to target a cell and populate it with the class
 console.log(i);
@@ -53,6 +73,7 @@ if (miniSNum == true){
 $($grid[i + 1]).addClass("miniSub").html("miniSubB");
 miniSubArray[1] = i + 1;
 gridNumRandomized[1] = i;
+
 }
 
 numberRandomize();
@@ -68,6 +89,7 @@ gridNumRandomized[3] = i;
 $($grid[i + 2]).addClass("techSub").html("techSubC");
 techSubArray[2] = i + 2;
 gridNumRandomized[3] = i;
+console.log(i);
 }
 
 numberRandomize();
@@ -86,7 +108,7 @@ gridNumRandomized[6];
 $($grid[i + 27]).addClass("powerSub").html("powersubD");
 powerSubArray[3] = i + 27;
 gridNumRandomized[7];
-
+console.log(i);
 }
 
 $("td").click(function(){

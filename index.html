@@ -9,12 +9,42 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous">
   document.getElementsByClassName("mainGame").style.backgroundImage = "url('images/cartoon-underwater.jpg')";
+
 }
 </script>
   <script src = "js/main.js" async></script>
     <title></title>
+
   </head>
   <body>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <span class="close">&times;</span> -->
+          <h2>SSC BATTLESHIP FRONTIER: Starter Manual</h2>
+        </div>
+        <div class="modal-body">
+  <h3 style="text-decoration:underline;">Mission Brief For Yee Withered Souls!</h3>
+  <p>Listen Up! For Yee In For a Bounty of Treasure</p>
+  <p>These Sally Wags Have Gone Underwater For The Treasure</p>
+  <p>Take Them Pirates Out To Gain The Treasure!!! </p>
+
+  <div>
+
+    <label for="fname">What Is Your Name Capt': </label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." class="fnameTextBox">
+    <span class="close"><input type="submit" value="Submit"></span>
+
+</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
 
 <div class="title">
 <h1>SSC BATTLESHIP FRONTIER</h1>
@@ -22,12 +52,14 @@
 <div class="wrapper">
 
 <div class="playerInformation">
-<p>Player Information</p>
+<h2>Player Information</h2>
+<p class="pName"></p>
+<p class="pScore">Score: </p>
 </div>
 
 <div class="mainGame">
 
-  <table>
+  <table class= "table">
       <tr>
         <td data-num="0"></td>
         <td data-num="1"></td>
@@ -140,9 +172,10 @@
 
 </div>
 </div>
-<div class="footer">
 
-</div>
+
+
+
 
   </body>
 </html>
