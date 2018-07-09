@@ -1,5 +1,6 @@
 body{
   background-image: url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/pirates-treasure.jpg");
+   cursor:url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/Ship-Wheel.cur"), auto;
 }
 
 /* input[type=text]{
@@ -122,7 +123,9 @@ input[type=submit]:hover {
   margin-top: -10px;
   margin-left: -10px;
   text-align: center;
-  font-family: fantasy;
+  font-family: arial;
+  text-shadow: 5px 5px grey;
+  font-size: 40px;
 }
 
 .table{
@@ -150,6 +153,8 @@ background-size: cover;
 
 .playerInformation p{
 margin-bottom: 10px;
+font-size: 20px;
+font-style: italic;
 }
 
 .mainGame{

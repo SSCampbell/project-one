@@ -53,10 +53,13 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span>, close the modal
 span.onclick = function() {
-  modal.style.display = "none";
-var $name = document.getElementById("fname").value;
+modal.style.display = "none";
+var $pName = document.getElementsByClassName('pName').value;
+var $name = document.getElementById("fname").value; //textbox value
+// $($pName).html($name);
 //name class text
-$(pName).html($name);
+console.log($name);
+$(".pName").html($name);
 }
 
 
