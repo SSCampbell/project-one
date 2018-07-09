@@ -31,17 +31,39 @@ input[type=submit]:hover {
     color: orange;
 }
 
-/* div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}  */
-
-.modal {
+.modalManual {
     display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 80px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modalWin {
+    display: Hidden; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 30px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modalLoss {
+    display: Hidden; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 30px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -68,12 +90,12 @@ input[type=submit]:hover {
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-    from {top:-400px; opacity:0}
+    from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
 
 @keyframes animatetop {
-    from {top:-400px; opacity:0}
+    from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
 
@@ -119,7 +141,7 @@ input[type=submit]:hover {
 .title{
   width: 96%;
   height: 100px;
-  padding: 40px;
+  padding: 40px 0px -20px 0px;
   margin-top: -10px;
   margin-left: -10px;
   text-align: center;
@@ -199,22 +221,26 @@ td {
   font-size: 8em;
 }
 
-.miniSub{
+.battleSub{
   background-color: blue;
   font-size: 1px;
 }
 
-.techSub{
-  background-color: green;
-  font-size: 1px;
-}
-
-.powerSub{
-  background-color: orange;
-  font-size: 1px;
-}
 
 .subHit{
   background-color: Red;
     font-size: 1px;
+}
+
+.gameOverBtn {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 5px 90px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 80px;
+    cursor: pointer;
 }
