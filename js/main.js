@@ -22,103 +22,80 @@
 //IF so they have an option to try again or they can exit the game
 
 $(document).ready(function() {
-  console.log("Test");
+
 
 //var person1 = new person(name,score)
-var cannonSize = 30;
+var cannonSize = 10;
 //ships = [miniSub,techSub, bigSub, sneakySub, dangerSub];
 var $grid = $("td");
 var rand = Math.floor(Math.random() * 81);
 var newRand;
-var i = rand;
-var miniSubArray = [];
-var techSubArray = [];
-var powerSubArray = [];
+var randomNum = rand;
 var gridNumRandomized = [];
-var miniSNum = false;
-var techSNum = false;
-var powerSNum = false;
+var playerWon = false;
+
 
 var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal
 
 
-
 // When the user clicks on <span>, close the modal
+
+
 span.onclick = function() {
+  // if $($name).html() = "")
+  // {
+  //
+  // }
 modal.style.display = "none";
 var $pName = document.getElementsByClassName('pName').value;
 var $name = document.getElementById("fname").value; //textbox value
-// $($pName).html($name);
-//name class text
-console.log($name);
 $(".pName").html($name);
 }
 
 
-
 //make a class for each sub
 // this would be used to target a cell and populate it with the class
-console.log(i);
-//miniSub
-$($grid[i]).addClass("miniSub").html("miniSubA");
-miniSubArray[0] = i;
-gridNumRandomized[0] = i;
-miniSNum = true;
-if (miniSNum == true){
-$($grid[i + 1]).addClass("miniSub").html("miniSubB");
-miniSubArray[1] = i + 1;
-gridNumRandomized[1] = i;
 
+for (var i = 0; i < 19; i++) {
+  $($grid[randomNum]).addClass("battleSub").html("ship");
+  gridNumRandomized[i] = randomNum;
+  numberRandomize();
+  randomNum = rand;
 }
 
-numberRandomize();
-//techSub
-$($grid[i]).addClass("techSub").html("techSubA");
-techSubArray[0] = i;
-gridNumRandomized[2] = i;
-techSNum = true;
-if (techSNum == true){
-$($grid[i + 1]).addClass("techSub").html("techSubB");
-techSubArray[1] = i + 1;
-gridNumRandomized[3] = i;
-$($grid[i + 2]).addClass("techSub").html("techSubC");
-techSubArray[2] = i + 2;
-gridNumRandomized[3] = i;
-console.log(i);
-}
 
-numberRandomize();
-//powerSub
-$($grid[i]).addClass("powerSub").html("powerSubA");
-powerSubArray[0] = i;
-gridNumRandomized[4] = i;
-powerSNum = true;
-if (powerSNum == true){
-$($grid[i + 9]).addClass("powerSub").html("powersubB");
-powerSubArray[1] = i + 9;
-gridNumRandomized[5] = i;
-$($grid[i + 18]).addClass("powerSub").html("powersubC");
-powerSubArray[2] = i + 18;
-gridNumRandomized[6];
-$($grid[i + 27]).addClass("powerSub").html("powersubD");
-powerSubArray[3] = i + 27;
-gridNumRandomized[7];
-console.log(i);
-}
 
 $("td").click(function(){
-cannonSize--;
+if (cannonSize > 0)
+{
+  cannonSize--;
+  playerWon();
+}
+else
+{
+  gameOver();
+}
+
+function playerWon(){
+for (var i = 0; i < gridNumRandomized.length; i++) {
+if ($($grid[gridNumRandomized[i]]).html() != "hit")
+  {
+console.log("All targets have been shot at");
+  }
+  else{
+  console.log("outside if");
+}
+}
+};
+
+$(".pCannon").html(cannonSize);
 if ($(this).html() !== "")
 {
-$(this).addClass("subHit");
+$(this).addClass("subHit").html("hit");
 }
 else {
   console.log("Missed The Shot");
@@ -127,19 +104,42 @@ else {
 });
 
 function numberRandomize(){
-  for (var i = 0; i < gridNumRandomized.length; i++) {
-    do{
-    rand = Math.floor(Math.random() * 81);
-    i = rand;
-    } while (rand === gridNumRandomized[i])}
+  rand = Math.floor(Math.random() * 81);
+for (var i = 0; i < gridNumRandomized.length; i++) {
+//for loop given values with the array
+if (rand == gridNumRandomized[i])
+
+numberRandomize();
 }
 
+}
+return rand;
 
-if (cannonSize == 0)
+
+
+
+function gameOver()
 {
    console.log("GAMEOVER - You ran out of cannons");
+  // modalLoss.style.display = "block";
 }
 
+function victory()
+{
+  console.log("CONGRATULATIONS - You Have Defeated The Pirates");
+}
+
+$("gameOverBtn").click(function(){
+ model.style.display = "none";
+ location.reload();
+});
+
+
+// if ($(gridNumRandomized()).addClass() == "subHit" )
+// {
+//   console.log("CONGRATULATIONS YOU WON");
+//   modalWin.style.display = "block";
+// }
 // function resetBoard()
 // {
 //     $("td").html(" ");
