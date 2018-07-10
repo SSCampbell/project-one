@@ -2,7 +2,7 @@ $(document).ready(function() {
 $("#myModal2").hide();
 $("#myModal3").hide();
 
-var cannonSize = 35;
+var cannonSize = 50;
 var $grid = $("td");
 var rand = Math.floor(Math.random() * 81);
 var newRand;
@@ -32,7 +32,7 @@ $(".pName").html($name);
 $(".pCannon").html(cannonSize);
 $(".pScore").html(score);
 
-for (var i = 0; i < 19; i++) {
+for (var i = 0; i < 31; i++) {
   $($grid[randomNum]).addClass("battleSub").html("ship");
   gridNumRandomized[i] = randomNum;
   numberRandomize();
