@@ -35,6 +35,10 @@ var gridNumRandomized = [];
 var win = 0;
 var numOfPirates;
 var score = 0;
+var cannonSound = new audio('audio/cannon.wav');
+var splashSound = new audio('audio/splash.wav');
+var treasureSound = new audio('audio/treasure.wav');
+var eLaughSound = new audio('audio/evil-laugh.wav');
 
 var modal = document.getElementById('myModal');
 var modal2 = document.getElementById('myModal2');
@@ -78,6 +82,7 @@ $(".pPirates").html(numOfPirates);
 
 
 $("td").click(function(){
+  cannonSound.play();
 if (cannonSize >= 1 && $(this).html() !== "hit")
 {
   cannonSize--;
@@ -103,7 +108,7 @@ else if ($(this).html() == "hit")
 else {
   console.log("Missed The Shot");
   $(this).addClass("missSub").html("blank");
-
+  splashSound.play();
   if (score > 0)
   {score -= 5;
   $(".pScore").html(score);}
@@ -137,11 +142,10 @@ numberRandomize();
 }
 return rand;
 
-
 function gameOver()
 {
    console.log("GAMEOVER - You ran out of cannons");
-
+eLaughSound.play();
   //modal3.style.visibility = "show";
    // $("#myModal3").css({"visibility":"show"});
    $("#myModal3").show();
@@ -151,6 +155,7 @@ function gameOver()
 function victory()
 {
   console.log("CONGRATULATIONS - You Have Defeated The Pirates");
+treasureSound.play();
   // modal2.style.visibility = "show";
  $("#myModal2").show();
 }

@@ -238,19 +238,21 @@ td:hover{
 border: 1px solid white;
 }
 .battleSub{
-  background-color: blue;
+  background-color: transparent;
   font-size: 1px;
 }
 
 .missSub{
-  background-color: black;
+  background-image: url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/animated-shark2.gif");
   font-size: 1px;
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 
 .subHit{
   background-color: transparent;
-  background-image: url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/fire2.png");
+  background-image: url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/animated-bomb.gif");
     font-size: 1px;
     background-size:contain;
     background-repeat: no-repeat;
