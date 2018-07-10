@@ -43,6 +43,7 @@ input[type=submit]:hover {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+border-radius: 50px 20px;
 }
 
 .modalWin {
@@ -86,6 +87,7 @@ input[type=submit]:hover {
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s
+    border-radius: 50px 20px;
 }
 
 /* Add Animation */
@@ -157,6 +159,8 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
+
+
 .playerInformation{
   width: 18%;
   height: 520px;
@@ -221,6 +225,10 @@ td {
   font-size: 8em;
 }
 
+td:hover{
+    background-image: url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/cartoon-underwater.jpg");
+  -webkit-filter: saturate(7); filter: saturate(7);}
+
 .battleSub{
   background-color: blue;
   font-size: 1px;
@@ -228,8 +236,10 @@ td {
 
 
 .subHit{
-  background-color: Red;
+  background-color: transparent;
+  background-image: url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/fire2.png");
     font-size: 1px;
+    background-size:cover;
 }
 
 .gameOverBtn {

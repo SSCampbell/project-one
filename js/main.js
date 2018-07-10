@@ -32,7 +32,7 @@ var rand = Math.floor(Math.random() * 81);
 var newRand;
 var randomNum = rand;
 var gridNumRandomized = [];
-var playerWon = false;
+var win = 0;
 
 
 var modal = document.getElementById('myModal');
@@ -73,24 +73,27 @@ $("td").click(function(){
 if (cannonSize > 0)
 {
   cannonSize--;
-  playerWon();
+  //playerWon();
 }
 else
 {
   gameOver();
 }
 
-function playerWon(){
-for (var i = 0; i < gridNumRandomized.length; i++) {
-if ($($grid[gridNumRandomized[i]]).html() != "hit")
-  {
-console.log("All targets have been shot at");
-  }
-  else{
-  console.log("outside if");
-}
-}
-};
+// function playerWon(){
+// for (var i = 0; i < gridNumRandomized.length; i++) {
+// if ($($grid[gridNumRandomized[i]]).html() == "hit")
+//   {
+//     win++;
+// console.log("target shot");
+// }
+//   else{
+//   console.log("missed");
+// }
+//   }
+//   if (win == gridNumRandomized.length)
+//   console.log("Winner");
+// };
 
 $(".pCannon").html(cannonSize);
 if ($(this).html() !== "")
