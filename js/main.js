@@ -22,8 +22,8 @@
 //IF so they have an option to try again or they can exit the game
 
 $(document).ready(function() {
-
-
+$("#myModal2").hide();
+$("#myModal3").hide();
 //var person1 = new person(name,score)
 var cannonSize = 35;
 //ships = [miniSub,techSub, bigSub, sneakySub, dangerSub];
@@ -118,13 +118,9 @@ if (numOfPirates == 0)
 {victory();}
 
 else if (cannonSize == 0)
-{
-  gameOver();
-}
+{gameOver();}
 
- if (win == gridNumRandomized.length){
-   console.log("You Win")
- }
+else{}
 
 
 });
@@ -148,19 +144,19 @@ function gameOver()
 
   //modal3.style.visibility = "show";
    // $("#myModal3").css({"visibility":"show"});
-   // $("#myModal3").modal("show");
+   $("#myModal3").show();
 
 }
 
 function victory()
 {
   console.log("CONGRATULATIONS - You Have Defeated The Pirates");
-  modal2.style.visibility = "show";
-
+  // modal2.style.visibility = "show";
+ $("#myModal2").show();
 }
 
 $("gameOverBtn").click(function(){
- modal3.style.visibility = "Hidden";
+ $("#myModal3").hide();
 
  location.reload();
 });

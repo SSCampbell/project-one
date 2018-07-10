@@ -47,8 +47,8 @@ input[type=submit]:hover {
 border-radius: 50px 20px;
 }
 
-.modalWin {
-    visibility: hidden; /* Hidden by default */
+#myModal2 {
+    /* visibility: hidden; /* Hidden by default */ */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 30px; /* Location of the box */
@@ -61,8 +61,8 @@ border-radius: 50px 20px;
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.modalLoss {
-    visibility: hidden; /* Hidden by default */
+#myModal3 {
+    /* visibility: hidden; /* Hidden by default */ */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 30px; /* Location of the box */
@@ -155,7 +155,7 @@ border-radius: 50px 20px;
 }
 
 .table{
-  background-image: url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/cartoon-underwater.jpg");
+  background-image: url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/animated-water.gif");
 border: 3px solid black;
 background-repeat: no-repeat;
 background-size: cover;
@@ -176,16 +176,18 @@ background-size: cover;
   font-style: bold;
   font-size: 25px;
   padding-top: -1px;
-    text-shadow: 3px 3px white;
+    text-shadow: 2px 2px white;
   border: 3px solid black;
+  margin-bottom: 10px;
 
 }
 
 .playerInformation p{
-margin-bottom: 10px;
-font-size: 30px;
+
+font-size: 29px;
 font-style: italic;
 font-style: bold;
+border: 3px solid black;
 }
 
 .mainGame{
