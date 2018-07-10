@@ -32,7 +32,8 @@ input[type=submit]:hover {
 }
 
 .modalManual {
-    display: block; /* Hidden by default */
+
+    visibility: show;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 80px; /* Location of the box */
@@ -47,7 +48,7 @@ border-radius: 50px 20px;
 }
 
 .modalWin {
-    display: Hidden; /* Hidden by default */
+    visibility: hidden; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 30px; /* Location of the box */
@@ -61,7 +62,7 @@ border-radius: 50px 20px;
 }
 
 .modalLoss {
-    display: Hidden; /* Hidden by default */
+    visibility: hidden; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 30px; /* Location of the box */
@@ -235,7 +236,7 @@ td:hover{
 border: 1px solid white;
 }
 .battleSub{
-  background-color: transparent;
+  background-color: blue;
   font-size: 1px;
 }
 

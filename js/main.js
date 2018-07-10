@@ -34,9 +34,11 @@ var randomNum = rand;
 var gridNumRandomized = [];
 var win = 0;
 var numOfPirates;
-
+var score = 0;
 
 var modal = document.getElementById('myModal');
+var modal2 = document.getElementById('myModal2');
+var modal3 = document.getElementById('myModal3');
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
@@ -51,13 +53,15 @@ span.onclick = function() {
   // {
   //
   // }
-modal.style.display = "none";
+
+modal.style.visibility = "hidden";
 var $pName = document.getElementsByClassName('pName').value;
 var $name = document.getElementById("fname").value; //textbox value
 $(".pName").html($name);
 }
 
 $(".pCannon").html(cannonSize);
+$(".pScore").html(score);
 
 
 //make a class for each sub
@@ -74,45 +78,22 @@ $(".pPirates").html(numOfPirates);
 
 
 $("td").click(function(){
-if (cannonSize >= 1)
+if (cannonSize >= 1 && $(this).html() !== "hit")
 {
   cannonSize--;
 $(".pCannon").html(cannonSize);
 }
-else
-{
-  gameOver();
-}
-checkWinner();
 
- function checkWinner(){
- for (var i = 0; i < gridNumRandomized.length; i++) {
- if ($($grid[gridNumRandomized[i]]).html() == "hit" && $($grid[gridNumRandomized[i]]).html() !== "ship")
-   {
-     win++;
-console.log(i);
-
- }
-
- else {
-   return false;
- }
-
-   }
-  return true;
- }
-
- if (win == gridNumRandomized.length){
-   console.log("You Win")
- }
 
 
 $(".pCannon").html(cannonSize);
-if ($(this).html() !== "")
+if ($(this).html() !== "" && $(this).html() !== "blank" && $(this).html() !== "hit")
 {
 $(this).addClass("subHit").html("hit");
 numOfPirates--
+score += 20;
 $(".pPirates").html(numOfPirates);
+$(".pScore").html(score);
 }
 
 else if ($(this).html() == "hit")
@@ -122,7 +103,29 @@ else if ($(this).html() == "hit")
 else {
   console.log("Missed The Shot");
   $(this).addClass("missSub").html("blank");
+
+  if (score > 0)
+  {score -= 5;
+  $(".pScore").html(score);}
+  else if (score < 0)
+  {
+    score = 0;
+    $(".pScore").html(score);
+  }
 }
+
+if (numOfPirates == 0)
+{victory();}
+
+else if (cannonSize == 0)
+{
+  gameOver();
+}
+
+ if (win == gridNumRandomized.length){
+   console.log("You Win")
+ }
+
 
 });
 
@@ -142,16 +145,23 @@ return rand;
 function gameOver()
 {
    console.log("GAMEOVER - You ran out of cannons");
-  // modalLoss.style.display = "block";
+
+  //modal3.style.visibility = "show";
+   // $("#myModal3").css({"visibility":"show"});
+   // $("#myModal3").modal("show");
+
 }
 
 function victory()
 {
   console.log("CONGRATULATIONS - You Have Defeated The Pirates");
+  modal2.style.visibility = "show";
+
 }
 
 $("gameOverBtn").click(function(){
- model.style.display = "none";
+ modal3.style.visibility = "Hidden";
+
  location.reload();
 });
 
