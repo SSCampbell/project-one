@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 
 //var person1 = new person(name,score)
-var cannonSize = 10;
+var cannonSize = 35;
 //ships = [miniSub,techSub, bigSub, sneakySub, dangerSub];
 var $grid = $("td");
 var rand = Math.floor(Math.random() * 81);
@@ -33,6 +33,7 @@ var newRand;
 var randomNum = rand;
 var gridNumRandomized = [];
 var win = 0;
+var numOfPirates;
 
 
 var modal = document.getElementById('myModal');
@@ -56,6 +57,8 @@ var $name = document.getElementById("fname").value; //textbox value
 $(".pName").html($name);
 }
 
+$(".pCannon").html(cannonSize);
+
 
 //make a class for each sub
 // this would be used to target a cell and populate it with the class
@@ -66,42 +69,59 @@ for (var i = 0; i < 19; i++) {
   numberRandomize();
   randomNum = rand;
 }
-
+numOfPirates = gridNumRandomized.length;
+$(".pPirates").html(numOfPirates);
 
 
 $("td").click(function(){
-if (cannonSize > 0)
+if (cannonSize >= 1)
 {
   cannonSize--;
-  //playerWon();
+$(".pCannon").html(cannonSize);
 }
 else
 {
   gameOver();
 }
+checkWinner();
 
-// function playerWon(){
-// for (var i = 0; i < gridNumRandomized.length; i++) {
-// if ($($grid[gridNumRandomized[i]]).html() == "hit")
-//   {
-//     win++;
-// console.log("target shot");
-// }
-//   else{
-//   console.log("missed");
-// }
-//   }
-//   if (win == gridNumRandomized.length)
-//   console.log("Winner");
-// };
+ function checkWinner(){
+ for (var i = 0; i < gridNumRandomized.length; i++) {
+ if ($($grid[gridNumRandomized[i]]).html() == "hit" && $($grid[gridNumRandomized[i]]).html() !== "ship")
+   {
+     win++;
+console.log(i);
+
+ }
+
+ else {
+   return false;
+ }
+
+   }
+  return true;
+ }
+
+ if (win == gridNumRandomized.length){
+   console.log("You Win")
+ }
+
 
 $(".pCannon").html(cannonSize);
 if ($(this).html() !== "")
 {
 $(this).addClass("subHit").html("hit");
+numOfPirates--
+$(".pPirates").html(numOfPirates);
+}
+
+else if ($(this).html() == "hit")
+{
+
 }
 else {
   console.log("Missed The Shot");
+  $(this).addClass("missSub").html("blank");
 }
 
 });
@@ -117,8 +137,6 @@ numberRandomize();
 
 }
 return rand;
-
-
 
 
 function gameOver()
@@ -137,34 +155,11 @@ $("gameOverBtn").click(function(){
  location.reload();
 });
 
-
-// if ($(gridNumRandomized()).addClass() == "subHit" )
-// {
-//   console.log("CONGRATULATIONS YOU WON");
-//   modalWin.style.display = "block";
-// }
 // function resetBoard()
 // {
 //     $("td").html(" ");
 //     $("td").html(" ");
 //
 // }
-// $(this).html(miniSub);
-
-// $(this).html(techSub);
-// $(this).html(bigSub);
-// $(this).html(sneakySub);
-// $(this).html(dangerSub);
-
-
-
-
-
-
-
-
-
-
-
 
 });
