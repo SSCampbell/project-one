@@ -35,10 +35,10 @@ var gridNumRandomized = [];
 var win = 0;
 var numOfPirates;
 var score = 0;
-var cannonSound = new audio('audio/cannon.wav');
-var splashSound = new audio('audio/splash.wav');
-var treasureSound = new audio('audio/treasure.wav');
-var eLaughSound = new audio('audio/evil-laugh.wav');
+var cannonSound = new Audio('audio/cannon.wav');
+var splashSound = new Audio('audio/splash.wav');
+var treasureSound = new Audio('audio/treasure.wav');
+var eLaughSound = new Audio('audio/evil-laugh.wav');
 
 var modal = document.getElementById('myModal');
 var modal2 = document.getElementById('myModal2');
@@ -82,10 +82,11 @@ $(".pPirates").html(numOfPirates);
 
 
 $("td").click(function(){
-  cannonSound.play();
-if (cannonSize >= 1 && $(this).html() !== "hit")
+
+if (cannonSize >= 1 && $(this).html() !== "hit" && $(this).html() !== "blank")
 {
   cannonSize--;
+  cannonSound.play();
 $(".pCannon").html(cannonSize);
 }
 
@@ -95,7 +96,7 @@ $(".pCannon").html(cannonSize);
 if ($(this).html() !== "" && $(this).html() !== "blank" && $(this).html() !== "hit")
 {
 $(this).addClass("subHit").html("hit");
-numOfPirates--
+numOfPirates--;
 score += 20;
 $(".pPirates").html(numOfPirates);
 $(".pScore").html(score);
@@ -105,7 +106,7 @@ else if ($(this).html() == "hit")
 {
 
 }
-else {
+else if ($(this).html() !== "hit" && $(this).html() !== "blank") {
   console.log("Missed The Shot");
   $(this).addClass("missSub").html("blank");
   splashSound.play();
