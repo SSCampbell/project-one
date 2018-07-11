@@ -2,7 +2,7 @@ $(document).ready(function() {
 $("#myModal2").hide();
 $("#myModal3").hide();
 
-var cannonSize = 50;
+var cannonSize = 30;
 var $grid = $("td");
 var rand = Math.floor(Math.random() * 81);
 var newRand;
@@ -21,18 +21,25 @@ var modal2 = document.getElementById('myModal2');
 var modal3 = document.getElementById('myModal3');
 var span = document.getElementsByClassName("close")[0];
 
+// var audio = $(".image")[0];
+// $(".image").mouseenter(function() {////////////////////
+//   audio.play();
+// });
+
 span.onclick = function() {
+var $pName = document.getElementsByClassName('pName').value;
+var $name = document.getElementById("fname").value;
 
 modal.style.visibility = "hidden";
-var $pName = document.getElementsByClassName('pName').value;
-var $name = document.getElementById("fname").value; //textbox value
 $(".pName").html($name);
+
+
 }
 
 $(".pCannon").html(cannonSize);
 $(".pScore").html(score);
 
-for (var i = 0; i < 31; i++) {
+for (var i = 0; i < 20; i++) {
   $($grid[randomNum]).addClass("battleSub").html("ship");
   gridNumRandomized[i] = randomNum;
   numberRandomize();
@@ -57,6 +64,7 @@ if ($(this).html() !== "" && $(this).html() !== "blank" && $(this).html() !== "h
 $(this).addClass("subHit").html("hit");
 numOfPirates--;
 score += 20;
+  $(".image").attr("src","./images/pirate-hit.gif");
 $(".pPirates").html(numOfPirates);
 $(".pScore").html(score);
 }
@@ -64,9 +72,12 @@ $(".pScore").html(score);
 else if ($(this).html() == "hit")
 {}
 else if ($(this).html() !== "hit" && $(this).html() !== "blank") {
-  console.log("Missed The Shot");
   $(this).addClass("missSub").html("blank");
   splashSound.play();
+
+  $(".image").attr("src","./images/pirate-laugh.gif");
+
+
   if (score > 0)
   {score -= 5;
   $(".pScore").html(score);}
@@ -86,14 +97,14 @@ else{}
 
 function numberRandomize(){
   rand = Math.floor(Math.random() * 81);
-for (var i = 0; i < gridNumRandomized.length; i++) {
-if (rand == gridNumRandomized[i])
+  for (var i = 0; i < gridNumRandomized.length; i++) {
+  if (rand == gridNumRandomized[i])
 
-numberRandomize();
+  numberRandomize();
+  }
+  return rand;
 }
 
-}
-return rand;
 
 function gameOver()
 {
@@ -112,8 +123,8 @@ treasureSound.play();
  $("#myModal2").show();
 }
 
-$("gameOverBtn").click(function(){
- // $("#myModal3").hide();
+
+$(".gameOverBtn").click(function(){
 
  location.reload();
 });
