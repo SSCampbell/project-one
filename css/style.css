@@ -129,6 +129,8 @@ input[type=submit]:hover {
 .modal-body {
   padding: 2px 16px;
   background-image: url("../images/pirates-treasure.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: black;
   font-size: 25px;
   font-family: cursive;
