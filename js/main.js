@@ -25,28 +25,34 @@ var span = document.getElementsByClassName("close")[0];
 // $(".image").mouseenter(function() {////////////////////
 //   audio.play();
 // });
-
 span.onclick = function() {
 var $pName = document.getElementsByClassName('pName').value;
 var $name = document.getElementById("fname").value;
-
 modal.style.visibility = "hidden";
+
+
 $(".pName").html($name);
-
-
-}
-
 $(".pCannon").html(cannonSize);
 $(".pScore").html(score);
 
 for (var i = 0; i < 20; i++) {
-  $($grid[randomNum]).addClass("battleSub").html("ship");
+  $($grid[randomNum]).addClass("startSub").html("ship");
   gridNumRandomized[i] = randomNum;
   numberRandomize();
   randomNum = rand;
 }
+
+setTimeout(function () {
+  for (var i = 0; i < 20; i++) {
+    $($grid[gridNumRandomized[i]]).removeClass("startSub").html("ship");
+    $($grid[gridNumRandomized[i]]).addClass("battleSub").html("ship");
+  }
+}, 2000);
+
 numOfPirates = gridNumRandomized.length;
 $(".pPirates").html(numOfPirates);
+}
+
 
 
 $("td").click(function(){

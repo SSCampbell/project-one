@@ -1,5 +1,7 @@
 body{
   background-image: url("../images/pirates-treasure.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
    cursor:url("../images/Ship-Wheel.cur"), auto;
     overflow:hidden;
 }
@@ -127,13 +129,13 @@ input[type=submit]:hover {
   background-image: url("../images/pirates-treasure.jpg");
   color: black;
   font-size: 25px;
-  font-family: arial;
+  font-family: cursive;
   font-style: bold;
   text-align: center;
 }
 
 .modal-body h3 {
-  font-size: 40px;
+    font-size: 29px;
     text-shadow: 2px 2px white;
       margin-top: 3px;
 }
@@ -180,7 +182,7 @@ background-size: cover;
   width: 70%;
   height: 200;
   display: inline-block;
-  margin-top: -40px;
+  margin-top: -43px;
 }
 
 .playerInformation{
@@ -216,6 +218,7 @@ background-color: white;
 font-size: 35px;
 font-style: italic;
 font-style: bold;
+border-bottom: 3px solid black;
 }
 
 
@@ -268,6 +271,7 @@ table {
   border-radius:10px;
   margin-right: -26px;
 
+
 }
 td {
   border: 1px solid black;
@@ -283,7 +287,7 @@ td:hover{
 border: 1px solid white;
 }
 .battleSub{
-  background-color: blue;
+  background-color: transparent;
   font-size: 1px;
 }
 
@@ -292,6 +296,11 @@ border: 1px solid white;
   font-size: 1px;
     background-repeat: no-repeat;
     background-size:cover;
+}
+
+.startSub{
+  background-image: url("../images/animated-boat.gif");
+  font-size: 1px;
 }
 
 

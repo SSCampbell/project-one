@@ -2,15 +2,23 @@
 
 ##Project Review:##
 
-###The Game project was proposed to
+###The Game project was proposed to use all the skills learned from the past weeks to create a web-based game which uses HTML/CSS/JS.
 
 ##Functionality:
 
+###
+
 ##Implementation:
+
+###
 
 ##Potential Issues:
 
+###
+
 ##How To Play The Game:
+
+###
 
 ##To Access The Game:
 ###Click Here: https://sscampbell.github.io/project-one/
