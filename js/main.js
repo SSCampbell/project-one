@@ -51,8 +51,6 @@ if (cannonSize >= 1 && $(this).html() !== "hit" && $(this).html() !== "blank")
 $(".pCannon").html(cannonSize);
 }
 
-
-
 $(".pCannon").html(cannonSize);
 if ($(this).html() !== "" && $(this).html() !== "blank" && $(this).html() !== "hit")
 {
@@ -64,9 +62,7 @@ $(".pScore").html(score);
 }
 
 else if ($(this).html() == "hit")
-{
-
-}
+{}
 else if ($(this).html() !== "hit" && $(this).html() !== "blank") {
   console.log("Missed The Shot");
   $(this).addClass("missSub").html("blank");
@@ -80,15 +76,11 @@ else if ($(this).html() !== "hit" && $(this).html() !== "blank") {
     $(".pScore").html(score);
   }
 }
-
 if (numOfPirates == 0)
 {victory();}
-
 else if (cannonSize == 0)
 {gameOver();}
-
 else{}
-
 
 });
 
@@ -121,7 +113,7 @@ treasureSound.play();
 }
 
 $("gameOverBtn").click(function(){
- $("#myModal3").hide();
+ // $("#myModal3").hide();
 
  location.reload();
 });

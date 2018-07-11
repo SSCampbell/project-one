@@ -1,6 +1,6 @@
 body{
-  background-image: url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/pirates-treasure.jpg");
-   cursor:url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/Ship-Wheel.cur"), auto;
+  background-image: url("../images/pirates-treasure.jpg");
+   cursor:url("../images/Ship-Wheel.cur"), auto;
 }
 
 /* input[type=text]{
@@ -127,7 +127,7 @@ border-radius: 50px 20px;
 
 .modal-body {
   padding: 2px 16px;
-  background-image: url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/pirates-treasure.jpg");
+  background-image: url("../images/pirates-treasure.jpg");
   color: black;
   font-size: 25px;
   font-family: arial;
@@ -161,7 +161,7 @@ border-radius: 50px 20px;
 
 .table{
   width: 70%;
-  background-image: url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/animated-water.gif");
+  background-image: url("../images/animated-water.gif");
 border: 3px solid black;
 background-repeat: no-repeat;
 background-size: cover;
@@ -179,7 +179,7 @@ background-size: cover;
   width: 20%;
   height: 520px;
   float:left;
-  background-image: url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/pirate-map.jpg");
+  background-image: url("../images/pirate-map.jpg");
   display: inline-block;
   margin-left: 10px;
   font-family: arial;
@@ -246,7 +246,7 @@ td {
 }
 
 td:hover{
-    background-image: url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/animated-cannon.gif");
+    background-image: url("../images/animated-cannon.gif");
     background-repeat: no-repeat;
 border: 1px solid white;
 }
@@ -256,7 +256,7 @@ border: 1px solid white;
 }
 
 .missSub{
-  background-image: url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/animated-shark2.gif");
+  background-image: url("../images/animated-shark2.gif");
   font-size: 1px;
     background-repeat: no-repeat;
     background-size:cover;
@@ -265,7 +265,7 @@ border: 1px solid white;
 
 .subHit{
   background-color: transparent;
-  background-image: url("C:/Users/TECH-W71/Documents/engineering-13/project-one/images/animated-bomb.gif");
+  background-image: url("../images/animated-bomb.gif");
     font-size: 1px;
     background-size:contain;
     background-repeat: no-repeat;
