@@ -47,7 +47,7 @@ input[type=submit]:hover {
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(100,0,0,0.4);
-    border-radius: 0px 0px;
+    border-radius:10px;
 }
 
 .modalWin {
@@ -60,6 +60,7 @@ input[type=submit]:hover {
   overflow: hidden;
   background-color: rgb(0,0,0);
   background-color: rgba(100,0,0,0.4);
+  border-radius:10px;
 }
 
 .modalLoss {
@@ -72,6 +73,7 @@ input[type=submit]:hover {
   overflow: hidden;
   background-color: rgb(0,0,0);
   background-color: rgba(100,0,0,0.4);
+  border-radius:10px;
 }
 
 /* Modal Content */
@@ -201,6 +203,7 @@ background-size: cover;
     text-shadow: 2px 2px white;
   border: 3px solid black;
   margin-bottom: 10px;
+  border-radius:10px;
 
 }
 
@@ -307,6 +310,14 @@ border: 1px solid white;
 .subHit{
   background-color: transparent;
   background-image: url("../images/animated-bomb.gif");
+    font-size: 1px;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.visionSub{
+  background-color: transparent;
+  background-image: url("../images/animated-telescope.gif");
     font-size: 1px;
     background-size:contain;
     background-repeat: no-repeat;
