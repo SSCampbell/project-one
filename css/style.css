@@ -1,0 +1,285 @@
+body{
+  background-image: url("../images/pirates-treasure.jpg");
+   cursor:url("../images/Ship-Wheel.cur"), auto;
+}
+
+/* input[type=text]{
+    width: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+*/
+input[type=submit] {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    margin: -4px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type=submit]:hover {
+    background-color: black;
+    color: orange;
+}
+
+.modalManual {
+
+    visibility: show;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 80px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+border-radius: 50px 20px;
+}
+
+#myModal2 {
+    /* visibility: hidden; /* Hidden by default */ */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 30px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow:hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#myModal3 {
+    /* visibility: hidden; /* Hidden by default */ */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 20px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow:hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+    border-radius: 50px 20px;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: black;
+    color: white;
+
+    text-align: center;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  background-image: url("../images/pirates-treasure.jpg");
+  color: black;
+  font-size: 25px;
+  font-family: arial;
+  font-style: bold;
+  text-align: center;
+}
+
+.modal-body h3 {
+  font-size: 40px;
+    text-shadow: 2px 2px white;
+}
+
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.title{
+  width: 96%;
+  height: 100px;
+  padding: 40px 0px -20px 0px;
+  margin-top: -10px;
+  margin-left: -10px;
+  text-align: center;
+  font-family: arial;
+  text-shadow: 5px 5px white;
+  font-size: 40px;
+}
+
+.table{
+  width: 70%;
+  background-image: url("../images/animated-water.gif");
+border: 3px solid black;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.image {
+  width: 10%;
+  height: 600;
+  display: inline-block;
+  margin-right: -50px;
+
+}
+
+.playerInformation{
+  width: 20%;
+  height: 520px;
+  float:left;
+  background-image: url("../images/pirate-map.jpg");
+  display: inline-block;
+  margin-left: 10px;
+  font-family: arial;
+  text-align: center;
+  padding: 0px;
+  font-style: bold;
+  font-size: 25px;
+  padding-top: -1px;
+    text-shadow: 2px 2px white;
+  border: 3px solid black;
+  margin-bottom: 10px;
+
+}
+
+.playerInformation p{
+
+font-size: 29px;
+font-style: italic;
+font-style: bold;
+border: 3px solid black;
+}
+
+.mainGame{
+  width: 60%;
+  height: 525px;
+  float: center;
+  display: inline-block;
+  /* margin-right: -10px; */
+  margin-left: -70px;
+}
+
+.picture{
+width: 10%;
+height: 520px;
+float: right;
+background-color: lightgrey;
+margin-right: -10px;
+margin-left: -10px;
+}
+
+.wrapper{
+  width: 100%;
+  height: 525px;
+}
+
+.footer{
+  width: 96%;
+  height: 10px;
+  background-color: black;
+  padding: 30px;
+  margin-left: -10px;
+}
+
+table {
+  margin: 0px auto;
+  border-radius:10px;
+}
+td {
+  border: 1px solid black;
+  width: 1%;
+  height: 53px;
+  text-align: center;
+  font-size: 8em;
+}
+
+td:hover{
+    background-image: url("../images/animated-cannon.gif");
+    background-repeat: no-repeat;
+border: 1px solid white;
+}
+.battleSub{
+  background-color: transparent;
+  font-size: 1px;
+}
+
+.missSub{
+  background-image: url("../images/animated-shark2.gif");
+  font-size: 1px;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
+.subHit{
+  background-color: transparent;
+  background-image: url("../images/animated-bomb.gif");
+    font-size: 1px;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.gameOverBtn {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 5px 90px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 80px;
+    cursor: pointer;
+}
