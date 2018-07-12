@@ -48,7 +48,7 @@ setTimeout(function () {
     $($grid[gridNumRandomized[i]]).removeClass("startSub").html("ship");
     $($grid[gridNumRandomized[i]]).addClass("battleSub").html("ship");
   }
-}, 2000);
+}, 3000);
 
 
 for (var i = 0; i < 5; i++) {
@@ -63,7 +63,7 @@ setTimeout(function () {
     $($grid[visionPower[i]]).removeClass("startSub").html("vision");
     $($grid[visionPower[i]]).addClass("battleSub").html("vision");
   }
-}, 2000);
+}, 3000);
 
 numOfPirates = gridNumRandomized.length;
 $(".pPirates").html(numOfPirates);
@@ -114,7 +114,7 @@ setTimeout(function () {
     $($grid[gridNumRandomized[i]]).removeClass("startSub").html("ship");
     $($grid[gridNumRandomized[i]]).addClass("battleSub").html("ship");
   }
-}, 2000);
+}, 3000);
 
 }
 
@@ -149,8 +149,8 @@ function gameOver()
 {
 eLaughSound.play();
 
-   $("#myModal3").show();
-
+  $("#myModal3").show();
+$("body").css("background-color", "rgba(100,0,0,0.4)");
 }
 
 function victory()
@@ -158,6 +158,7 @@ function victory()
 treasureSound.play();
 
  $("#myModal2").show();
+
 }
 
 
