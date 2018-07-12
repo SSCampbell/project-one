@@ -151,7 +151,6 @@ function gameOver()
 eLaughSound.play();
 
   $("#myModal3").show();
-$("body").css("background-color", "rgba(100,0,0,0.4)");
 }
 
 function victory()
