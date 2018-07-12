@@ -5,11 +5,9 @@ $("#myModal3").hide();
 var cannonSize = 35;
 var $grid = $("td");
 var rand = Math.floor(Math.random() * 81);
-var newRand;
 var randomNum = rand;
 var gridNumRandomized = [];
 var visionPower = [];
-var win = 0;
 var numOfPirates;
 var score = 0;
 var cannonSound = new Audio('audio/cannon.wav');
@@ -21,13 +19,12 @@ var modal = document.getElementById('myModal');
 var modal2 = document.getElementById('myModal2');
 var modal3 = document.getElementById('myModal3');
 var span = document.getElementsByClassName("close")[0];
-
-span.onclick = function() {
 var $pName = document.getElementsByClassName('pName').value;
 var $name = document.getElementById("fname").value;
+
+span.onclick = function() {
+
 modal.style.visibility = "hidden";
-
-
 $(".pName").html($name);
 $(".pCannon").html(cannonSize);
 $(".pScore").html(score);
