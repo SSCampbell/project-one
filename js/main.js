@@ -22,10 +22,6 @@ var modal2 = document.getElementById('myModal2');
 var modal3 = document.getElementById('myModal3');
 var span = document.getElementsByClassName("close")[0];
 
-// var audio = $(".image")[0];
-// $(".image").mouseenter(function() {////////////////////
-//   audio.play();
-// });
 span.onclick = function() {
 var $pName = document.getElementsByClassName('pName').value;
 var $name = document.getElementById("fname").value;
