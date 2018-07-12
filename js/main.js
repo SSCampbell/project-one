@@ -131,7 +131,8 @@ if (numOfPirates == 0)
 {victory();}
 else if (cannonSize == 0)
 {gameOver();}
-else{}
+else if (cannonSize < numOfPirates)
+{gameOver();}
 });
 
 function numberRandomize(){
