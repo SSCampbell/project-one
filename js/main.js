@@ -2,7 +2,7 @@ $(document).ready(function() {
 $("#myModal2").hide();
 $("#myModal3").hide();
 
-var cannonSize = 30;
+var cannonSize = 35;
 var $grid = $("td");
 var rand = Math.floor(Math.random() * 81);
 var newRand;
@@ -75,7 +75,7 @@ $("td").click(function(){
 if (cannonSize >= 1 && $(this).html() !== "hit" && $(this).html() !== "blank")
 {
   cannonSize--;
-  cannonSound.play();
+
 $(".pCannon").html(cannonSize);
 }
 
@@ -85,6 +85,7 @@ if ($(this).html() !== "" && $(this).html() !== "blank" && $(this).html() !== "h
 $(this).addClass("subHit").html("hit");
 numOfPirates--;
 score += 20;
+  cannonSound.play();
   $(".image").attr("src","./images/pirate-hit.gif");
 $(".pPirates").html(numOfPirates);
 $(".pScore").html(score);
@@ -96,7 +97,6 @@ else if ($(this).html() !== "hit" && $(this).html() !== "blank" && $(this).html(
 {
   $(this).addClass("missSub").html("blank");
   splashSound.play();
-
   $(".image").attr("src","./images/pirate-laugh.gif");
 }
 
