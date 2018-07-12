@@ -60,7 +60,7 @@
   <h3>CONGRATULATIONS YOU HAVE DEFEATED THE OTHER UNDERWATER PIRATES!</h3>
   <p class="pName">...</p>
   <p class="score">Score: <span class="pScore"></span></p>
-  <p><img src="images/pirate-lost.gif" alt="pirate-lost" width="600" height="400"></p>
+  <p><img src="images/pirate-lost.gif" alt="pirate-lost" width="450" height="250"></p>
   <div>
     <label for="fname">Care To Find More Treasure?</label>
     <button class="gameOverBtn">Try Again</button>
@@ -221,14 +221,21 @@
 
 </div>
 <div class="r-section">
-  <img class="image" src="images/pirate-gang.gif" alt="pirate gang">
-
+  <div class="popup" onclick="myFunction()"><img class="image" src="images/pirate-gang.gif" alt="pirate gang">
+  <span class="popuptext" id="myPopup">We Need To Find The Treasure!</span>
+  </div>
 </div>
 </div>
 
 
 
-
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+</script>
 
   </body>
 </html>
