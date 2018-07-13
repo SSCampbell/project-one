@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous">
   document.getElementsByClassName("mainGame").style.backgroundImage = "url('images/cartoon-underwater.jpg')";
-
 }
 </script>
   <script src = "js/main.js" async></script>
@@ -33,13 +33,13 @@
   <p>Listen Up! For Yee In For a Bounty of Treasure</p>
   <p>These Scally Wags Have Gone Underwater For The Treasure</p>
   <p>Take Them Pirates Out To Gain The Treasure!!! </p>
-  <p>VIEW THE SHIPS BEFORE THEY GO UNDERWATER!</p>
+  <p style="text-decoration: underline;">VIEW THE SHIPS BEFORE THEY GO UNDERWATER!</p>
   <p class="missionBrief"> Eliminate The Ships By Selecting The Correct Place On The Grid</p>
 
   <div>
 
     <label for="fname">What Is Your Name Capt': </label>
-    <input type="text" id="fname" name="firstname" placeholder="" class="fnameTextBox">
+    <input type="text" id="fname" name="firstname" placeholder="Enter A Name" class="fnameTextBox">
     <span class="close"><input type="submit" value="Submit"></span>
 
 </div>
@@ -59,7 +59,7 @@
         </div>
         <div class="modal-body">
   <h3>CONGRATULATIONS YOU HAVE DEFEATED THE OTHER UNDERWATER PIRATES!</h3>
-  <p class="pName">...</p>
+  <p class="pName">Captain BlueBeard</p>
   <p class="score">Score: <span class="pScore"></span></p>
   <p><img src="images/pirate-lost.gif" alt="pirate-lost" width="500" height="300"></p>
   <div>
@@ -100,7 +100,7 @@
 
 <div class="playerInformation">
 <h2>Player Information</h2>
-<p class="pName">...</p>
+<p class="pName">Captain BlueBeard</p>
 <p class="score">Score: <span class="pScore"></span></p>
 <p class="">Cannonball: <span class="pCannon"></span></p>
 <p class="">Pirates Left: <span class="pPirates"></span></p>

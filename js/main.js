@@ -20,12 +20,15 @@ var modal2 = document.getElementById('myModal2');
 var modal3 = document.getElementById('myModal3');
 var span = document.getElementsByClassName("close")[0];
 var $pName = document.getElementsByClassName('pName').value;
-var $name = document.getElementById("fname").value;
+// var $name = document.getElementById("fname").value;
 
 span.onclick = function() {
 
 modal.style.visibility = "hidden";
-$(".pName").html($name);
+if($("#fname").val() != "") {
+  $(".pName").html($("#fname").val());
+}
+
 $(".pCannon").html(cannonSize);
 $(".pScore").html(score);
 
