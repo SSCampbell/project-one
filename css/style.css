@@ -1,18 +1,11 @@
 body{
   background-image: url("../images/pirates-treasure.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
    cursor:url("../images/Ship-Wheel.cur"), auto;
+    overflow:hidden;
 }
 
-/* input[type=text]{
-    width: 10%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-*/
 input[type=submit] {
     width: 100%;
     background-color: black;
@@ -33,52 +26,63 @@ input[type=submit]:hover {
 
 .modalManual {
 
-    visibility: show;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 80px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-border-radius: 50px 20px;
+  visibility: show;
+      position: fixed;
+      z-index: 1;
+      padding-top: 5px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(100,0,0,0.4);
+
+
 }
 
-#myModal2 {
-    /* visibility: hidden; /* Hidden by default */ */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 30px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow:hidden; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+.modalManual p {
+      font-size: 33px;
 }
 
-#myModal3 {
-    /* visibility: hidden; /* Hidden by default */ */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 20px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow:hidden; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+.modalWin {
+  z-index: 1;
+  padding-top: 0px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0,0,0);
+  background-color: rgba(100,0,0,0.0);
+
 }
 
-/* Modal Content */
+.modalWin h2 {
+    margin-top: 15px;
+}
+
+.modalLoss {
+  z-index: 1;
+  padding-top: 0px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0,0,0);
+  background-color: rgba(100,0,0,0.0);
+margin-top: -22px;
+
+}
+
+.modalLoss h2 {
+    margin-top: 15px;
+}
+
 .modal-content {
     position: relative;
-    background-color: #fefefe;
+    background-image: url("../images/pirates-treasure.jpg");
     margin: auto;
     padding: 0;
     border: 1px solid #888;
@@ -87,11 +91,11 @@ border-radius: 50px 20px;
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
     border-radius: 50px 20px;
+      font-family: pirateFont2;
 }
 
-/* Add Animation */
 @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
@@ -102,12 +106,13 @@ border-radius: 50px 20px;
     to {top:0; opacity:1}
 }
 
-/* The Close Button */
 .close {
     color: white;
     float: center;
     font-size: 28px;
     font-weight: bold;
+      font-family: pirateFont2;
+        border-radius:10px;
 }
 
 .close:hover,
@@ -121,58 +126,111 @@ border-radius: 50px 20px;
     padding: 2px 16px;
     background-color: black;
     color: white;
-
+    border-radius: 10px;
+border: 3px solid black;
     text-align: center;
+      font-family: pirateFont;
+}
+
+.modal-header h2{
+  margin-top: 15px;
 }
 
 .modal-body {
   padding: 2px 16px;
   background-image: url("../images/pirates-treasure.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: black;
-  font-size: 25px;
-  font-family: arial;
+  font-size: 29px;
+  font-family: pirateFont;
   font-style: bold;
   text-align: center;
+      border-radius: 10px;
+      border: 3px solid black;
+}
+.tryAgainTxt{
+  border: 3px solid black;
+  background-color: white;
+    border-radius: 10px;
+    font-style: bold;
+    font-family: pirateFont;
+        font-size: 24px;
 }
 
+
 .modal-body h3 {
-  font-size: 40px;
-    text-shadow: 2px 2px white;
+  font-size: 23px;
+      text-shadow: 2px 2px white;
+      margin-top: 4px;
+      font-family: pirateFont;
+      border: 3px solid black;
+      background-color: white;
+        border-radius: 10px;
 }
+
+.missionBrief {
+  border: 3px solid black;
+  background-color: white;
+  font-style: bold;
+  font-family: pirateFont;
+    border-radius: 10px;
+
+}
+
 
 
 .modal-footer {
     padding: 2px 16px;
     background-color: #5cb85c;
     color: white;
+        border-radius: 10px;
+        border: 3px solid black;
+          font-family: pirateFont2;
 }
 
 .title{
-  width: 96%;
+  width: 100%;
   height: 100px;
   padding: 40px 0px -20px 0px;
   margin-top: -10px;
   margin-left: -10px;
   text-align: center;
-  font-family: arial;
-  text-shadow: 5px 5px white;
-  font-size: 40px;
+  font-family: pirateFont;
+  font-size: 30px;
+      margin-bottom: 32px;
+
 }
 
+.title h1 {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  background-color: white;
+}
+
+
 .table{
-  width: 70%;
+    width: 80%;
   background-image: url("../images/animated-water.gif");
 border: 3px solid black;
 background-repeat: no-repeat;
 background-size: cover;
+
 }
 
-.image {
+.r-section{
   width: 10%;
   height: 600;
   display: inline-block;
   margin-right: -50px;
 
+}
+
+.image2 {
+  width: 70%;
+  height: 200;
+  display: inline-block;
+  margin-top: -43px;
 }
 
 .playerInformation{
@@ -182,7 +240,6 @@ background-size: cover;
   background-image: url("../images/pirate-map.jpg");
   display: inline-block;
   margin-left: 10px;
-  font-family: arial;
   text-align: center;
   padding: 0px;
   font-style: bold;
@@ -191,24 +248,36 @@ background-size: cover;
     text-shadow: 2px 2px white;
   border: 3px solid black;
   margin-bottom: 10px;
+  border-radius:10px;
 
 }
 
 .playerInformation p{
 
-font-size: 29px;
+font-size: 32px;
 font-style: italic;
 font-style: bold;
+  font-family: pirateFont2;
 border: 3px solid black;
+background-color: white;
 }
 
-.mainGame{
-  width: 60%;
-  height: 525px;
-  float: center;
-  display: inline-block;
-  /* margin-right: -10px; */
-  margin-left: -70px;
+.playerInformation h2{
+
+font-size: 35px;
+font-style: italic;
+font-style: bold;
+border-bottom: 3px solid black;
+  font-family: pirateFont;
+}
+
+
+.mainGame {
+    width: 60%;
+    height: 525px;
+    float: center;
+    display: inline-block;
+      margin-left: -150px;
 }
 
 .picture{
@@ -218,6 +287,20 @@ float: right;
 background-color: lightgrey;
 margin-right: -10px;
 margin-left: -10px;
+}
+
+.image img {
+    margin-bottom: -25px;
+    margin-left: -42px;
+    height: 430px;
+    padding: 0px;
+    padding-right: 0px;
+    width: 477px;
+    padding-top: 15px;
+}
+
+.image img:hover{
+
 }
 
 .wrapper{
@@ -236,6 +319,9 @@ margin-left: -10px;
 table {
   margin: 0px auto;
   border-radius:10px;
+  margin-right: -26px;
+
+
 }
 td {
   border: 1px solid black;
@@ -262,10 +348,23 @@ border: 1px solid white;
     background-size:cover;
 }
 
+.startSub{
+  background-image: url("../images/animated-boat.gif");
+  font-size: 1px;
+}
+
 
 .subHit{
   background-color: transparent;
   background-image: url("../images/animated-bomb.gif");
+    font-size: 1px;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.visionSub{
+  background-color: transparent;
+  background-image: url("../images/animated-telescope.gif");
     font-size: 1px;
     background-size:contain;
     background-repeat: no-repeat;
@@ -279,7 +378,72 @@ border: 1px solid white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+      font-size: 19px;
     margin: 4px 80px;
     cursor: pointer;
+      border-radius:10px;
+          font-family: pirateFont;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    border: 2px solid black;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 96%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:white transparent transparent transparent;
+      border: 2px solid black;
+}
+
+.popup:hover .popuptext {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+@font-face {
+    font-family: pirateFont;
+    src: url("../font/BlackPearl.ttf");
+}
+
+@font-face {
+  font-family: pirateFont2;
+  src:url("../font/pirateFont.ttf");
 }
