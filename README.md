@@ -26,7 +26,7 @@
 #### Click Here: https://sscampbell.github.io/project-one/
 
 ## To Download The Game:
-#### Go to https://github.com/SCampbell/project-one
+#### Go to https://github.com/SSCampbell/project-one
 #### Click on "Clone or Download" and Download the ZIP
 #### Click on the SSC Pirate Battleship html file to access the game
 
